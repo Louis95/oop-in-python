@@ -23,3 +23,11 @@ class Supplier(Contact):
         print("If this were a real system we would send"
                 "'{}' order to '{}'".format(order, self.name))
 
+
+
+class MailSender:
+    def send_mail(self, message):
+        print("sending emails to " + self.email )
+
+class EmailableContact (Contact, MailSender):
+    pass
